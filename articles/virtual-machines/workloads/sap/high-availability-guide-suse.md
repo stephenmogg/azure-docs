@@ -278,6 +278,11 @@ The following items are prefixed with either **[A]** - applicable to all nodes, 
    sudo zypper in -t patch SUSE-SLE-HA-12-SP2-2017-886=1
    </code></pre>
 
+1. **[A]** Configure the cluster to be able to use the Cluster Connector.
+   Make the following modification to the cluster configuration.  This setting allows the SUSE Cluster Connector to function correctly.
+   <pre><code>crm configure op_defaults record-pending=true
+   </code></pre>
+
 1. **[A]** Setup host name resolution
 
    You can either use a DNS server or modify the /etc/hosts on all nodes. This example shows how to use the /etc/hosts file.
